@@ -21,7 +21,11 @@ from .mongo import (
 
 from .bigcommerce import BigCommerceClient, create_bigcommerce_client
 
-from .auth import create_auth_router
+from .auth import create_auth_router, verify_token
+
+from .credentials import CredentialManager
+
+from .third_party import ThirdPartyAPIClient, create_third_party_client
 
 __all__ = [
     # JWE
@@ -47,4 +51,10 @@ __all__ = [
     "create_bigcommerce_client",
     # Auth
     "create_auth_router",
+    "verify_token",
+    # Credentials
+    "CredentialManager",
+    # Third Party
+    "ThirdPartyAPIClient",
+    "create_third_party_client",
 ]
